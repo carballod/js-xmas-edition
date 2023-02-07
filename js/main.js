@@ -25,15 +25,9 @@ const validarCiudad = function(ciudad){
 };
 
 const validarDescripcionRegalo = function(descripcionRegalo){
-    if (descripcionRegalo.length >= 100) {
-        return 'La descripcion debe tener menos de 100 caracteres';
-    } else if (descripcionRegalo.length === 0) {
-        return 'El campo descripcion no puede estar vacio';
-    } else if (!/^[A-z0-9]+$/i.test(descripcionRegalo)){
-        return 'El campo descripcion solo puede tener numeros y letras';
-    }
+    if (descripcionRegalo.length === 0) return 'El campo descripcion no puede estar vacio';
+    else if (descripcionRegalo.length >= 100) return 'La descripcion debe tener menos de 100 caracteres';
+    else if (!/^[A-z0-9]+$/i.test(descripcionRegalo)) return 'El campo descripcion solo puede tener numeros y letras';
 
     return '';
 }
-
-
