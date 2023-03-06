@@ -130,31 +130,31 @@ function validarEdadesIntegrantes(obtenerEdadesIntegrantes) {
   return '';
 }
 
-function validarCalculador(event){
+// function validarCalculador(event){
 
-  const errorEdades = validarEdadesIntegrantes(obtenerEdadesIntegrantes);
-  const errorCantidadIntegrantes = validarNumeroIntegrantes(cantidadIntegrantes);
+//   const errorEdades = validarEdadesIntegrantes(obtenerEdadesIntegrantes);
+//   const errorCantidadIntegrantes = validarNumeroIntegrantes(cantidadIntegrantes);
 
-  const errores = {
-    cantidadIntegrantes: errorCantidadIntegrantes,
-    obtenerEdadesIntegrantes: errorEdades
-  };
+//   const errores = {
+//     cantidadIntegrantes: errorCantidadIntegrantes,
+//     obtenerEdadesIntegrantes: errorEdades
+//   };
 
-  event.preventDefault();
-};
+//   event.preventDefault();
+// };
 
-function manejarErrores(errores){
-  const keys = Object.keys(errores);
-  let cantidadErrores = 0;
+// function manejarErrores(errores){
+//   const keys = Object.keys(errores);
+//   let cantidadErrores = 0;
 
-  keys.forEach(function(key){
-    const error = errores[key];
-    if(error){
-      cantidadErrores++;
-      $form[key].className = 'error';
-    } else {
-      $form[key].className = '';
-    }
-    return cantidadErrores;
-  });
-}
+//   keys.forEach(function(key){
+//     const error = errores[key];
+//     if(error){
+//       cantidadErrores++;
+//       $form[key].className = 'error';
+//     } else {
+//       $form[key].className = '';
+//     }
+//     return cantidadErrores;
+//   });
+// }
